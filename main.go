@@ -7,12 +7,12 @@ import (
 )
 
 func main() {
-	todo := todos.Todo{
+	firstTodo := todos.Todo{
 		Description: "First todo",
 		Priority:    1,
 		Status:      "In Progress",
 	}
-	todo2 := todos.Todo{
+	secondTodo := todos.Todo{
 		Description: "Second todo",
 		Priority:    3,
 		Status:      "Done",
@@ -20,8 +20,8 @@ func main() {
 	oldTodo := todos.Todo{
 		ID: 1,
 	}
-	todo.Save()
-	todo2.Save()
+	firstTodo.Save()
+	secondTodo.Save()
 	oldTodo.Get()
 	log.Println(oldTodo)
 }
